@@ -8,5 +8,5 @@
 
 ###### While importing views from the app(news) to urls in news *from . import views* instead of the dot(.) replace it with the name of the app (news) it should be *from news import views*
 
-##### At the end of every topic as we start the development server, rem to add the URLS which students should use to avoid them being confused
+##### At the end of every topic as we start the development server, rem to add the URLS or paths which students should use to avoid them being confused
 
