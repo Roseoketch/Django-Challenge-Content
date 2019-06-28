@@ -13,7 +13,7 @@ class Editor (models.Model):
         ordering = ['first_name']
 
 
-class tags(models.Model):
+class tag(models.Model):
     name = models.CharField(max_length =30)
 
     def __str__(self):
