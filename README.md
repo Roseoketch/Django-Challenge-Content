@@ -11,3 +11,5 @@
 ##### At the end of every topic as we start the development server, rem to add the URLS or paths which students should use to avoid them being confused
 
 ###### Add migration command after adding phone field to avoid getting programming error 
+
+*when adding class instances to model we should avoid use of plural since they are registered in databse in plural*
