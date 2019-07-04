@@ -28,3 +28,7 @@ class Article(models.Model):
     tag = models.ManyToManyField(tag)
     pub_date = models.DateTimeField(auto_now_add=True)
 
+@classmethod
+def days_news(cls,date):
+    news = cls.objects.filter(pub_date__date = date)
+    return news
