@@ -40,7 +40,7 @@ class ArticleTestClass(TestCase):
         Article.objects.all().delete()
 
     def test_get_news_today(self):
-        today_news = Article.todays_news()
+        today_news = Article.today_news()
         self.assertTrue(len(today_news)>0)
     
     def test_get_news_by_date(self):
