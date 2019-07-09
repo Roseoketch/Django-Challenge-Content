@@ -29,7 +29,7 @@ class Article(models.Model):
     editor = models.ForeignKey(Editor)
     tag = models.ManyToManyField(tag)
     pub_date = models.DateTimeField(auto_now_add=True)
-    article_image = models.ImageField(upload_to = 'articles/')
+    article_image = models.ImageField(upload_to = 'articles/', null=True, blank=True)
 
     def __str__(self):
         return self.title

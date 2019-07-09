@@ -12,4 +12,5 @@
 
 ###### Add migration command after adding phone field to avoid getting programming error 
 
+##### Making row image in article to have article_image = models.ImageField(upload_to = 'articles/', null=True, blank=True) for easier migration
 *when adding class instances to model we should avoid use of plural since they are registered in databse in plural*
