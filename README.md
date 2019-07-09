@@ -12,5 +12,11 @@
 
 ###### Add migration command after adding phone field to avoid getting programming error 
 
-##### Making row image in article to have article_image = models.ImageField(upload_to = 'articles/', null=True, blank=True) for easier migration
+##### Making row image in article to have article_image = models.ImageField(upload_to = 'articles/', null=True, blank=True) for easier migration.
+
+##### adding block condition to the article-image in the article file as showmn below
+**{% if person.image %}
+    *<img src="{{ person.image.url }}">*
+{% endif %}**
+
 *when adding class instances to model we should avoid use of plural since they are registered in databse in plural*
