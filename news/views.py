@@ -7,6 +7,8 @@ import datetime as dt
 
 # Create your views here.
 def news_today(request):
+    date = dt.date.today()
+    news = Article.todays_news()
     if request.method == 'POST':
         form = NewsLetterForm(request.POST)
         if form.is_valid():
