@@ -3,6 +3,7 @@ from django.http import HttpResponse, Http404,HttpResponseRedirect
 from .models import Article
 from .forms import NewsLetterForm
 from .email import send_welcome_email
+from django.contrib.auth.decorators import login_required
 
 import datetime as dt
 
@@ -53,7 +54,8 @@ def search_results(request):
         message = "You haven't searched for any term"
         return render(request, 'all-news/search.html',{"message":message})
         
-def article(request,article_id):
+@login_required(login_url='/accounts/login/')
+def article(request, article_id):    
     try:
         article = Article.objects.get(id = article_id)
     except DoesNotExist:
