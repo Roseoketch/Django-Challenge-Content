@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse, Http404,HttpResponseRedirect
 from .models import Article
 from .forms import NewsLetterForm
+from .email import send_welcome_email
 
 import datetime as dt
 
@@ -16,6 +17,8 @@ def news_today(request):
             email = form.cleaned_data['email']
             recipient = NewsLetterRecipients(name = name,email =email)
             recipient.save()
+            send_welcome_email(name,email)
+
             HttpResponseRedirect('news_today')
     else:
         form = NewsLetterForm()
