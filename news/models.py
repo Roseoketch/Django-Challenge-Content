@@ -23,6 +23,8 @@ class tag(models.Model):
     def __str__(self):
         return self.name
 
+        
+from tinymce.models import HTMLField
 class Article(models.Model):
     title = models.CharField(max_length =60)
     post = models.TextField()
